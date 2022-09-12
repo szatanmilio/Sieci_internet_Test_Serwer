@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.serwer.MainController">
+    <children>
+        <Label layoutX="10.0" layoutY="14.0" text="Port" />
+        <TextField fx:id="textFieldPort" layoutX="44.0" layoutY="10.0" prefHeight="25.0" prefWidth="110.0" text="7777" />
+        <Button fx:id="buttonStart" layoutX="174.0" layoutY="10.0" mnemonicParsing="false" onAction="#onStartButtonClick" prefHeight="25.0" prefWidth="415.0" text="START" />
+        <Label layoutX="10.0" layoutY="48.0" text="Statistics" />
+        <SplitPane dividerPositions="0.4, 0.7" layoutX="10.0" layoutY="65.0" mouseTransparent="true" prefHeight="325.0" prefWidth="579.0">
+            <items>
+                <VBox alignment="BASELINE_CENTER" prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="37.0" prefWidth="0.0" />
+                        <Label text="Single data size [bytes]" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <Label text="Total size of transfered data [kbytes]" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <Label text="Total transmission time [sec]" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <Label text="Statistics calculation time [msec]" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <Label text="Transmission speed [kbytes/sec]" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <Label text="Lost data [bytes]" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <Label text="Transmission error [%]" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="10.0" />
+                    </children>
+                </VBox>
+                <VBox alignment="BASELINE_CENTER" prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Label fx:id="labelTCP" text="TCP" textFill="RED">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="TCPDataSize" alignment="CENTER_RIGHT" text="0" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <TextField fx:id="TCPTotalSize"  alignment="CENTER_RIGHT" text="0" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <TextField fx:id="TCPTime" alignment="CENTER_RIGHT" text="0" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <TextField fx:id="TCPCalcTime" alignment="CENTER_RIGHT" text="0" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <TextField fx:id="TCPSpeed" alignment="CENTER_RIGHT" text="0" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <TextField fx:id="TCPLostData" alignment="CENTER_RIGHT" text="0" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <TextField fx:id="TCPError" alignment="CENTER_RIGHT" text="0" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="10.0" />
+                    </children>
+                </VBox>
+                <VBox alignment="BASELINE_CENTER" prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Label fx:id="labelUDP" text="UDP" textFill="RED">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="UDPDataSize" alignment="CENTER_RIGHT" text="0" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <TextField fx:id="UDPTotalSize"  alignment="CENTER_RIGHT" text="0" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <TextField fx:id="UDPTime" alignment="CENTER_RIGHT" text="0" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <TextField fx:id="UDPCalcTime" alignment="CENTER_RIGHT" text="0" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <TextField fx:id="UDPSpeed" alignment="CENTER_RIGHT" text="0" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <TextField fx:id="UDPLostData" alignment="CENTER_RIGHT" text="0" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="30.0" />
+                        <TextField fx:id="UDPError" alignment="CENTER_RIGHT" text="0" />
+                        <Separator opacity="0" orientation="VERTICAL" prefHeight="10.0" />
+                    </children>
+                </VBox>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
